@@ -245,7 +245,7 @@ class User extends Connection{
      * @param $email
      */
     function updateUser($username, $FName, $LName, $email){
-            $rowCount = $this->userExistence($username);
+            $rowCount = $this->uniqueUsername($username);
 
             if($rowCount == 1) {
                 $masterConn = $GLOBALS["masterConn"];
