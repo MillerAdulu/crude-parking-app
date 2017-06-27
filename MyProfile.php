@@ -19,7 +19,7 @@
     $book = new Booking;
     ?>
 </head>
-<body class="w3-container">
+<body class="w3-container" style="background-color: #2a3133">
     <header class="w3-panel">
         <nav class="w3-black">
             <ul class="w3-navbar w3-container">
