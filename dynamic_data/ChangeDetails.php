@@ -9,7 +9,8 @@
     $change->sanitizeInput($email = $_POST["email"]);
 
     if(!$change->updateUser($username, $firstName, $lastName, $email)){
-        die("Failed to update records. Please try again later.");
+        header("Location: ../MyProfile.php");
+        //die("Failed to update records. Please try again later.");
     }else{
         header("Location: ../MyProfile.php");
     }

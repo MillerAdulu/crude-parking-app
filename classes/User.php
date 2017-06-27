@@ -261,6 +261,11 @@ class User extends Connection{
                 }
             }
         }
+
+    /**
+     * @param $input
+     * @return string
+     */
     function sanitizeInput($input){
         $input = trim($input);
         $input = stripslashes($input);
