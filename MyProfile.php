@@ -27,6 +27,7 @@
                 <li><a href="index.php#aboutus">About Us</a></li>
                 <li><a href="index.php#booking">Book Parking Spot</a></li>
                 <li><a href="index.php#contactus">Contact Us</a></li>
+                <li><a href="manage.php">Manage Profile</a></li>
                 <li class="w3-right"><a href="logout.php" class="w3-teal">Log Out</a></li>
             </ul>
         </nav>
