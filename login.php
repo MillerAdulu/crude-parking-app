@@ -22,7 +22,7 @@
                     }
                         ?></span><br>
                 <label class="w3-label">Username</label>
-                <input type="text" name="username" class="w3-input w3-hover-blue" required><br>
+                <input type="text" name="username" class="w3-input w3-hover-blue" autofocus required><br>
                 <label class="w3-label">Password</label>
                 <input type="password" name="password" class="w3-input w3-hover-blue" required><br>
                 <div class="w3-center"><input type="submit" value="Login" class="w3-btn w3-round-jumbo w3-indigo">
