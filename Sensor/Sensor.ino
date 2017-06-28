@@ -8,15 +8,25 @@ WiFiClient client;
 #define trigPin 8 // Trigger Pin
 #define LEDPin 13 // Onboard LED
 
-char* ssid = "theBIGbox";
-char* password = "98765432";
+//Home WiFi
+//char* ssid = "theBIGbox";
+//char* password = "98765432";
+//Incubator WiFi
 //char* ssid = "Incubator";
 //char* password = "Incubator#2013";
-String data;
+//School WiFi
+char* ssid = "strathmore";
+char* password = "5trathm0re";
+//Mark
+//char* ssid = "OnePlus3";
+//char* password = "12345678";
 
-//Host
-char* host = "192.168.43.104";
+//Home
+//char* host = "192.168.43.104";
+//Incubator
 //char* host = "172.16.40.165";
+//School
+char* host = "10.51.7.42";
 int maximumRange = 200; // Maximum range needed
 int minimumRange = 0; // Minimum range needed
 long duration, distance; // Duration used to calculate distance
@@ -71,8 +81,8 @@ void loop() {
    turn LED OFF to indicate successful reading. */
     if(distance > 50){
       allocateSensors(3, 1);
-      delay(3600000);
-      Serial.print("Delaying");
+      Serial.println("Delaying");
+      delay(10000);
     }else if(distance < 51){
       allocateSensors(3, 0);
     }
@@ -92,9 +102,8 @@ void allocateSensors(int spot, int availability){
     if(!client.connect(host, httpPort)){
       Serial.println("connection failed");
     }else{
-      Serial.println("done");
       Serial.println(availability);
-      client.print("GET /parking/dynamic_data/Save.php?");
+      client.print("GET /finalparking/dynamic_data/Save.php?");
       client.print("position=");
       client.print(spot);
       client.print("&&availability=");
